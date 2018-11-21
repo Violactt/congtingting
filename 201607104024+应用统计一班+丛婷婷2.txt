@@ -1,0 +1,31 @@
+sudo mysql -u root -p
+create database congtingting charset=utf8;
+show databases;
+use congtingting;
+ create table company1(
+    -> id int auto_increment primary key,
+    -> salary int);
+ create table company2(
+    -> id int auto_increment primary key,
+    -> salary int);
+insert into company1(id,salary)
+    -> values(1,4000);
+insert into company1(salary) values(6000),(8000),(5000),(12000),(9000),(7500)，(7500),(8000),(4500),(12500),(7000),(7500)，(6500),(13000);
+insert into company2(salary) values(7500),(8000),(4500),(12500),(7000),(7500)，(5500),(8000),(4500),(12500),(7000),(10000)，(7000)，(11000);
+select * from company1;
+select * from company2;
+select sum(salary) from company1;
+select sum(salary) from company2;
+select max(salary) from company1;
+select max(salary) from company2;
+select min(salary) from company1;
+select min(salary) from company2;
+
+不会比较大小！
+
+select * from company1 order by salary desc;
+select * from company2 order by salary desc;
+select * from company1 order by salary desc limit 5,5;
+select * from company1 order by salary desc limit 10,5;
+select * from company2 order by salary desc limit 5,5;
+select * from company2 order by salary desc limit 10,5;
