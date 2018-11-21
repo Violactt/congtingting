@@ -12,3 +12,7 @@ insert into gwc(id,favor,discount,wish)
     -> values(1,"lipstick","halffare","Givenchy");
 insert into gwc(favor,discount,wish) values("skirt","originalprice","only"),("coat","0.1discount","zara");
 select * from gwc;
+update gwc set wish="dior" where favor="lipstick";
+delete from gwc where favor="coat";
+select * from gwc;
+exit;
